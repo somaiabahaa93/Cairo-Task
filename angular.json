@@ -23,7 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": ["src/favicon.ico", "src/assets","src/web.config"],
             "styles": ["node_modules/bootstrap/scss/bootstrap.scss",
             "node_modules/bootstrap-icons/font/bootstrap-icons.css",
             "src/styles.scss"],
@@ -35,8 +35,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "40mb",
+                  "maximumError": "30mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -96,6 +96,9 @@
             "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
           ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
